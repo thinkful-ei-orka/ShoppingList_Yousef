@@ -23,12 +23,15 @@ function checkAndUncheck() {
 $('.shopping-item-toggle').on('click', function (event) {
     console.log('this is running')
     event.preventDefault()
-    $('shopping-item-toggle').on('click').toggleClass('shopping-item__checked')
+    $('.shopping-list').on('click', '.shopping-item-toggle').toggleClass('shopping-item__checked')
 })
 }
 
 function removeItem() {
+$('.shopping-item-delete').on('click', function (event){
+    event.preventDefault()
 
+})
 }
 
 // $('.shopping-item-toggle').on('click', function(event){
@@ -37,3 +40,4 @@ function removeItem() {
 
 $(handleAddItem)
 $(checkAndUncheck)
+$(removeItem)
